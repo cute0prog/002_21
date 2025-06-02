@@ -1,0 +1,61 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fff6ec; 
+    color: #3d3d3d;
+    margin: 0;
+    padding: 30px 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #5e4b44;
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #7a5c58;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+  
+  .song {
+    background-color: #fffdf9; 
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .song:hover {
+    transform: translateY(-5px);
+  }
+  
+ 
+  .song img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  audio {
+    width: 100%;
+    margin-top: 15px;
+    filter: sepia(20%);
+  }
+  
+  
+  li {
+    list-style: none;
+  }
+  
+  

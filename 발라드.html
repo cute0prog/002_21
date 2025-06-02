@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>발라드</title>
+    <link rel="stylesheet" href="발라드css3.css">
+</head>
+<body>
+
+    <h1> 발라드 </h1>
+
+    <h2><li>봄이 와도</li></h2>
+    <img src="https://image.bugsm.co.kr/album/images/500/206276/20627670.jpg" width="250" height="160">
+    
+    <audio id="audio1" controls>
+        <source src="로이킴 - 봄이 와도  Kpop  Lyrics  가사.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2><li>남자를 몰라</li></h2>
+    <img src="https://i.namu.wiki/i/lFKAcI18MDLCo9NjGgJAKuvDMIGX_RRbsVSY0PGF50ROrPfa5T-xXKcBPYUWEefeZYpgdcNnltiGkCICdcMFVw.webp" width="250" height="160">
+
+    <br><br>
+
+    <audio id="audio2" controls>
+        <source src="버즈(Buzz) - 남자를 몰라 [가사Lyrics].mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    
+    <p id="nowPlaying" style="font-weight: bold; color: darkred; font-size: 18px; margin-top: 20px;"></p>
+
+ 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Page loaded successfully!");
+
+            const audio1 = document.getElementById("audio1");
+            const audio2 = document.getElementById("audio2");
+            const nowPlaying = document.getElementById("nowPlaying");
+
+            audio1.addEventListener("play", function() {
+                audio2.pause();
+                nowPlaying.textContent = "🎵 현재 재생 중: 로이킴 - 봄이 와도";
+                console.log("로이킴 - 봄이 와도 재생 중");
+            });
+
+            audio2.addEventListener("play", function() {
+                audio1.pause();
+                nowPlaying.textContent = "🎵 현재 재생 중: 버즈 - 남자를 몰라";
+                console.log("버즈 - 남자를 몰라 재생 중");
+            });
+        });
+    </script>
+
+</body>
+</html>

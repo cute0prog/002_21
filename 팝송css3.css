@@ -1,0 +1,48 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ece9f7;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+ 
+  h1 {
+    text-align: center;
+    color: #4b3f72;
+    margin-bottom: 30px;
+  }
+  
+ 
+  h2 {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    color: #5c4d99;
+  }
+  
+ 
+  .song {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  
+  .song img {
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  
+  
+  audio {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  

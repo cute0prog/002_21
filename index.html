@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>노래를 추천하는 웹사이트 임유빈</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <h1>노래 장르</h1>
+  <h2> 장르들로는 팝송, 인디, 발라드등이 있습니다.</h2>
+
+  <a href="팝송.html" target="_self"><h1>팝송</h1></a>
+  <h2>팝송은 해외 대중음악의 한 장르로, 일반적으로 널리 대중에게 인기 있는 곡들을 의미합니다.</h2>
+  <h2>주로 짧고 간결한 멜로디, 반복적인 후렴구, 쉬운 가사로 구성되어 있어서 듣기 쉽고 따라 부르기 좋습니다.</h2>
+
+  <a href="인디.html" target="_self"><h1>인디</h1></a>
+  <h2>인디(Indie) 노래는 대형 기획사나 주요 음반사에 속하지 않고 독립적으로 제작된 음악을 말합니다.</h2>
+  <h2>다양한 장르와 개성적인 스타일이 특징이며, 아티스트의 자유로운 창작과 실험적인 사운드가 돋보입니다.</h2>
+
+  <a href="발라드.html" target="_self"><h1>발라드</h1></a>
+  <h2>발라드는 감성적이고 서정적인 멜로디와 가사로 사랑, 이별, 그리움 등의 감정을 표현하는 음악 장르입니다.</h2>
+  <h2>주로 느린 템포와 부드러운 피아노, 스트링 등으로 구성되며, 가수의 감미로운 보컬이 돋보이는 특징이 있습니다.</h2>
+
+  <!-- 🎵 추천 버튼 -->
+  <button onclick="recommendSong()">노래 추천 받기</button>
+
+  <!-- 추천 결과 표시 -->
+  <p id="recommendResult" style="font-weight: bold; color: blue; font-size: 18px; margin-top: 15px;"></p>
+
+  <!-- ✅ 자바스크립트 -->
+  <script>
+    function recommendSong() {
+      const songs = [
+        "봄이 와도 - 로이킴",
+        "남자를 몰라 - 버즈",
+        "난 너만 사랑해서 - 알레프",
+        "사랑 없이 사는게 왜 그렇게 어려울까요 - 겸",
+        "혜야 - 검정치마",
+        "0310 - 백예린",
+        "난 묻어요 - 허회경",
+        "No.1 Party Anthem - Arctic Monkeys",
+        "Creep - Radiohead",
+        "Hypotheticals - Fran Vasilic",
+        "Sweet - Cigarettes After Sex"
+      ];
+      const randomSong = songs[Math.floor(Math.random() * songs.length)];
+      document.getElementById("recommendResult").textContent = "🎵 추천 노래: " + randomSong;
+    }
+  </script>
+
+</body>
+</html>

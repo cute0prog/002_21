@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>팝송</title>
+  <link rel="stylesheet" href="팝송css3.css">
+</head>
+<body>
+
+  <h1> 팝송</h1>
+
+  <h2><li>No.1 Party Anthem</li></h2>
+  <img src="https://i.ytimg.com/vi/mGUjVbsYG6E/maxresdefault.jpg" width="250" height="160">
+  <audio id="audio1" controls>
+    <source src="No. 1 Party Anthem.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2><li>Creep</li></h2>
+  <img src="https://i.namu.wiki/i/HlvxWdQC9hUTZfxXjn47K0hspGxn1dB5kC6f_a_U1ioZIYmRXXmSoDKAdJHWH77dnftEPzAcQjOqJakyqd5WNA.webp" width="250" height="160">
+  <audio id="audio2" controls>
+    <source src="Creep.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2><li>Hypotheticals</li></h2>
+  <img src="https://images.genius.com/8ac655417216faf4e0a4b9a9d365e400.600x600x1.png" width="250" height="160">
+  <audio id="audio3" controls>
+    <source src="만약에 내가 이랬다면 다시 나에게... ㅣ Fran Vasilic - Hypotheticals 가사해석팝송추천.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2><li>Sweet</li></h2>
+  <img src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMzFfMjQw/MDAxNTIyNDYyNjQ3ODg3._dvugECKmnA3WJHZdPiypfJnVhct9KGg926rqcFEGb0g.zxLWwEmGCifnWM-Mou1779JExGZydGZSvkMR7tyy328g.JPEG.sir_charles/cas1.jpg?type=w800" width="250" height="160">
+  <audio id="audio4" controls>
+    <source src="Sweet - Cigarettes After Sex.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+
+  <p id="nowPlaying" style="font-weight: bold; color: darkred; font-size: 18px; margin-top: 20px;"></p>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("팝송 페이지 로드 완료");
+
+      const audioList = [
+        { id: "audio1", title: "No.1 Party Anthem" },
+        { id: "audio2", title: "Creep" },
+        { id: "audio3", title: "Fran Vasilic - Hypotheticals" },
+        { id: "audio4", title: "Sweet - Cigarettes After Sex" }
+      ];
+
+      const nowPlaying = document.getElementById("nowPlaying");
+
+      audioList.forEach((audioItem, index) => {
+        const currentAudio = document.getElementById(audioItem.id);
+        
+        currentAudio.addEventListener("play", function() {
+       
+          audioList.forEach((otherItem, otherIndex) => {
+            if (otherIndex !== index) {
+              const otherAudio = document.getElementById(otherItem.id);
+              otherAudio.pause();
+            }
+          });
+
+         
+          nowPlaying.textContent = `🎧 현재 재생 중: ${audioItem.title}`;
+          console.log(`재생 중: ${audioItem.title}`);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

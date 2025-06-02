@@ -1,0 +1,57 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #edeef3; 
+    color: #2e2e2e;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.7rem;
+    color: #4b4e6d; 
+    margin-bottom: 50px;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    color: #5c5f78;
+    margin-bottom: 12px;
+    font-weight: normal;
+  }
+  
+  .song {
+    background-color: #fdfdfd;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 35px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .song:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .song img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  audio {
+    width: 100%;
+    margin-top: 20px;
+    filter: grayscale(30%) contrast(95%);
+  }
+  
+  li {
+    list-style: none;
+  }
+  

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>인디</title>
+  <link rel="stylesheet" href="인디css3.css">
+</head>
+<body>
+
+  <h1> 인디 </h1>
+
+  <h2><li>난 너만 사랑해서</li></h2>
+  <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/083/809/794/83809794_1684804647260_1_600x600.JPG" width="250" height="160">
+  <audio id="audio1" controls>
+    <source src="알레프 (ALEPH) - 2.  난 너만 사랑해서.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2><li>사랑 없이 사는게 왜 그렇게 어려울까요</li></h2>
+  <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/806/128/82806128_1657244228929_1_600x600.JPG" width="250" height="160">
+  <audio id="audio2" controls>
+    <source src="[Official Audio] 겸 (GYE0M) - 사랑 없이 사는게 왜 그렇게 어려울까요 (Loved, hoped, lost).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2><li>혜야</li></h2>
+  <img src="https://www.artinsight.co.kr/data/news/2208/3556039991_kfNLC9tj_3716836537_WOqKIJGc_team_baby.jpg" width="250" height="160">
+  <audio id="audio3" controls>
+    <source src="Heya.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2><li>0310</li></h2>
+  <img src="https://i1.sndcdn.com/artworks-uvEoxkhC5mTKNJ2z-zbaNzQ-t500x500.jpg" width="250" height="160">
+  <audio id="audio4" controls>
+    <source src="백예린 (Yerin Baek) - '0310' (Official Lyric Video).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2><li>난 묻어요</li></h2>
+  <img src="https://image.bugsm.co.kr/album/images/200/40937/4093774.jpg?version=20231206064227.0" width="250" height="160">
+  <audio id="audio5" controls>
+    <source src="Buried (난 묻어요).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p id="nowPlaying" style="font-weight: bold; color: darkblue; font-size: 18px; margin-top: 20px;"></p>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("인디 페이지 로드됨");
+
+      const audioList = [
+        { id: "audio1", title: "알레프 - 난 너만 사랑해서" },
+        { id: "audio2", title: "겸 - 사랑 없이 사는게 왜 그렇게 어려울까요" },
+        { id: "audio3", title: "혜야" },
+        { id: "audio4", title: "백예린 - 0310" },
+        { id: "audio5", title: "윤지영 - 난 묻어요" }
+      ];
+
+      const nowPlaying = document.getElementById("nowPlaying");
+
+      audioList.forEach((audioItem, index) => {
+        const currentAudio = document.getElementById(audioItem.id);
+        
+        currentAudio.addEventListener("play", function() {
+          audioList.forEach((otherItem, otherIndex) => {
+            if (otherIndex !== index) {
+              const otherAudio = document.getElementById(otherItem.id);
+              otherAudio.pause();
+            }
+          });
+
+          nowPlaying.textContent = `🎶 현재 재생 중: ${audioItem.title}`;
+          console.log(`${audioItem.title} 재생 중`);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
